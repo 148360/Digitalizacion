@@ -1,7 +1,7 @@
 <?php
 require_once "../Estudio/configuracion/conectar_a_db.php";  //se hace hace el requerimiento de la conexión a la base de datos
 
-$consulta = "select * from usuarios";         // se realiza la consulta a los datos de la tabla usuarios
+$consulta = "select * from usuarios where esta_activo = 1";         // se realiza la consulta a los datos de la tabla usuarios
 $resultado = $mysqli->query($consulta);
 
 

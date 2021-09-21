@@ -1,5 +1,3 @@
-
-
 <form action="guardar.php" method="POST">
     <label for="lnombre">Nombre:</label><br>
     <input type="text" id="nombre" name="nombre"><br>
@@ -10,6 +8,4 @@
     <button type="submit">Guardar</button>
 </form>
 
-
-
-
+<a href="index.php">Regresar a la lista</a>

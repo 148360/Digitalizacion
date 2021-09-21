@@ -6,7 +6,7 @@ require_once "../Estudio/configuracion/conectar_a_db.php";
 <?php
 
 
-$query = "SELECT * FROM usuarios WHERE esta_activo = 1 AND id = {$_GET["id"]};";
+$query = "SELECT * FROM usuarios WHERE id = {$_GET["id"]};";
 
 $resultado = $mysqli ->query($query);
 $fila = $resultado -> fetch_assoc();
@@ -33,8 +33,10 @@ $fila = $resultado -> fetch_assoc();
 </div>
 <hr class="text-danger"/>
 <form action="confirmar_borrado.php" method="post">
+    <input type="hidden" name="id" value="<?php echo $fila["id"]?>" />
+
     <button type="submit" class="btn btn-danger">
-        Borrar
+        Confirmar Borrar
     </button>
 </form>
 <a href="index.php">Regresar a la lista</a>

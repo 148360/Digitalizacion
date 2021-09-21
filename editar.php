@@ -17,8 +17,7 @@ $fila = $resultado->fetch_assoc() ?>
     <br>
     <br>
 
-    <label for="lid">ID:</label><br>
-    <input type="text" id="id" name="id" value="<?php echo $fila["id"] ?>" /> <br><br>
+    <input type="hidden" id="id" name="id" value="<?php echo $fila["id"] ?>" /> <br><br>
 
     <label for="lnombre">Nombre:</label><br>
     <input type="text" id="nombre" name="nombre" value="<?php echo $fila["nombre"] ?>" /> <br><br>
@@ -30,5 +29,8 @@ $fila = $resultado->fetch_assoc() ?>
     <input type="text" id="contraseña" name="contraseña" value="<?php echo $fila["contraseña"] ?>" /> <br><br>
 
     <button type="submit">Guardar</button>
+   
 
 </form>
+
+<a href="index.php">Regresar a la lista</a>
